@@ -7,5 +7,8 @@ import java.util.List;
 public interface DepartmentService {
     public Model createDepartment(Model model);
     public List<Model> getAllDepartments();
-    // public void deleteDepartmentById(Integer id);
+
+    public void deleteDepartmentById(Integer id);
+
+    boolean doesUsernameExist(String username);
 }

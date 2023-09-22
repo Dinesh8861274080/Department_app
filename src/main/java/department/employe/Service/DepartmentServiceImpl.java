@@ -21,6 +21,17 @@ public class DepartmentServiceImpl implements DepartmentService {
         return department.findAll();
     }
 
+    @Override
+    public void deleteDepartmentById(Integer id) {
+        department.deleteById(id);
+        // "deleted Successfully";
+
+    }
+    @Override
+    public boolean doesUsernameExist(String username) {
+        return department.existsByUsername(username);
+    }
+
     @Autowired
     DepartmentRepository department;
 

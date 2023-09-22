@@ -23,7 +23,15 @@ public class DepartmentController {
     List<Model> getAllDepartments() {
         return department.getAllDepartments();
     }
-
+    @DeleteMapping("/deleteId/{id}")
+    public String deleteId(@PathVariable Integer id) {
+         department.deleteDepartmentById(id);
+        return "deleted successsfullyyyyy";
+    }
+    @GetMapping("/exists/{username}")
+    public boolean doesUsernameExist(@PathVariable String username) {
+        return department.doesUsernameExist(username);
+    }
 
 
 }
